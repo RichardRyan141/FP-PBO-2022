@@ -17,7 +17,7 @@ Rencana Sementara
 
 -          Sprite menggunakan sprite yang ada di itch.io
 
--          Basic gameplay menggunakan basis game super mario bros / jump king
+-          Basic gameplay menggunakan basis game super mario bros / geometry dash
  
 
 GUI : JavaFX
