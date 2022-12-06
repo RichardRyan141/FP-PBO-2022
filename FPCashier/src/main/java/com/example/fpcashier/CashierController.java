@@ -194,33 +194,34 @@ public class CashierController implements Initializable {
 
     @FXML
     void numberClick(ActionEvent event) {
-        String num = textTotalPayment.getText();
-        if (event.getSource() == NumberDot)
-        {
-            String str = textTotalPayment.getText();
-            if (!str.contains("."))
-            {
-                if (str == "")
-                {
-                    textTotalPayment.setText("0.");
+        try {
+            textTotalPayment.setText(textTotalPayment.getText().replaceAll("\\s", ""));
+            String num = textTotalPayment.getText();
+            if (event.getSource() == NumberDot) {
+                if (!num.contains(".")) {
+                    if (num == "") {
+                        textTotalPayment.setText("0.");
+                    } else {
+                        textTotalPayment.setText(num + ".");
+                    }
                 }
-                else {
-                    textTotalPayment.setText(str + ".");
+            } else {
+                if (event.getSource() == NumberDelete) {
+                    textTotalPayment.setText("");
+                } else {
+                    if (num == "") {
+                        textTotalPayment.setText(((Button) event.getSource()).getText());
+                    } else {
+                        num = textTotalPayment.getText() + ((Button) event.getSource()).getText();
+                        textTotalPayment.setText(num);
+                    }
                 }
             }
         }
-        else {
-            if (event.getSource() == NumberDelete) {
-                textTotalPayment.setText("");
-            }
-            else {
-                if (num == "") {
-                    textTotalPayment.setText(((Button) event.getSource()).getText());
-                } else {
-                    num = textTotalPayment.getText() + ((Button) event.getSource()).getText();
-                    textTotalPayment.setText(num);
-                }
-            }
+        catch (NumberFormatException ex)
+        {
+            System.out.println("Total Payment contains non numeric character");
+            System.exit(-1);
         }
     }
 
