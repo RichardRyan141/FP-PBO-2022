@@ -114,9 +114,17 @@ public class CashierController implements Initializable {
     void btnPayClick(ActionEvent event) {
         try
         {
+            double payment;
             getTotal();
+            textTotalPayment.setText(textTotalPayment.getText().replaceAll("\\s", ""));
             double total = Double.parseDouble(labelTotal.getText());
-            double payment = Double.parseDouble(textTotalPayment.getText());
+            if (textTotalPayment.getText() == "")
+            {
+                payment = 0.0;
+            }
+            else {
+                payment = Double.parseDouble(textTotalPayment.getText());
+            }
             double change = payment-total;
             labelChange.setText(new DecimalFormat("0.00").format(change));
             if (change < 0)
@@ -237,6 +245,13 @@ public class CashierController implements Initializable {
         labelHutang.setVisible(false);
 
         labelChange.setText("0.00");
+
+        item1.setText("Hotdog\n $2");
+        item2.setText("Iced Tea\n $4");
+        item3.setText("Coffee\n $6");
+        item4.setText("Cupcake\n $7.50");
+        item5.setText("Milkshake\n $8.50");;
+        item6.setText("Soup\n $9");
     }
 
     public double getSubTotal()
@@ -276,7 +291,9 @@ public class CashierController implements Initializable {
             String name = i.getName().toString();
             int qty = i.getQty();
             double price = i.getPrice();
-            data.add(new ItemsModel(name,qty,price,qty*price));
+            if (qty != 0) {
+                data.add(new ItemsModel(name, qty, price, qty * price));
+            }
         }
         TableItem.setItems(data);
     }
