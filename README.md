@@ -11,7 +11,7 @@ Sudah selesai :
 - Pastikan bahwa base program sudah bekerja dengan baik
 
 To Do List (optionality) : 
-- Opsi untuk menambah barang untuk dijual diluar 6 barang awal
+- Opsi untuk menambah barang untuk dijual secara manual
 - Menyimpan data seluruh barang yang bisa dibeli
 - Menyimpan data barang yang paling sering dibeli
 - Fitur tambahan lain
