@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fpcashier.CashierController">
+   <children>
+      <Button fx:id="item1" layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#itemClick" prefHeight="69.0" prefWidth="70.0" text="\$2" />
+      <Button fx:id="item2" layoutX="110.0" layoutY="21.0" mnemonicParsing="false" onAction="#itemClick" prefHeight="69.0" prefWidth="70.0" text="\$4" />
+      <TableView fx:id="TableItem" layoutX="202.0" layoutY="21.0" prefHeight="200.0" prefWidth="316.0">
+        <columns>
+          <TableColumn fx:id="itemName" prefWidth="75.0" text="Item" />
+          <TableColumn fx:id="itemQty" prefWidth="56.0" text="Qty" />
+            <TableColumn fx:id="itemPrice" prefWidth="94.0" text="Unit Price" />
+            <TableColumn fx:id="tableTotalPrice" prefWidth="75.0" text="Total Price" />
+        </columns>
+      </TableView>
+      <Button fx:id="item3" layoutX="14.0" layoutY="111.0" mnemonicParsing="false" onAction="#itemClick" prefHeight="69.0" prefWidth="70.0" text="\$6" />
+      <Button fx:id="item4" layoutX="110.0" layoutY="111.0" mnemonicParsing="false" onAction="#itemClick" prefHeight="69.0" prefWidth="70.0" text="\$7.50" />
+      <Button fx:id="item5" layoutX="14.0" layoutY="202.0" mnemonicParsing="false" onAction="#itemClick" prefHeight="69.0" prefWidth="70.0" text="\$8.50" />
+      <Button fx:id="item6" layoutX="110.0" layoutY="202.0" mnemonicParsing="false" onAction="#itemClick" prefHeight="69.0" prefWidth="70.0" text="\$9" />
+      <Button fx:id="Number7" layoutX="542.0" layoutY="21.0" mnemonicParsing="false" onAction="#numberClick" prefHeight="43.0" prefWidth="49.0" text="7" />
+      <Button fx:id="Number8" layoutX="615.0" layoutY="21.0" mnemonicParsing="false" onAction="#numberClick" prefHeight="43.0" prefWidth="49.0" text="8" />
+      <Button fx:id="Number9" layoutX="683.0" layoutY="21.0" mnemonicParsing="false" onAction="#numberClick" prefHeight="43.0" prefWidth="49.0" text="9" />
+      <Button fx:id="Number4" layoutX="542.0" layoutY="78.0" mnemonicParsing="false" onAction="#numberClick" prefHeight="43.0" prefWidth="49.0" text="4" />
+      <Button fx:id="Number5" layoutX="615.0" layoutY="78.0" mnemonicParsing="false" onAction="#numberClick" prefHeight="43.0" prefWidth="49.0" text="5" />
+      <Button fx:id="Number6" layoutX="683.0" layoutY="78.0" mnemonicParsing="false" onAction="#numberClick" prefHeight="43.0" prefWidth="49.0" text="6" />
+      <Button fx:id="Number1" layoutX="542.0" layoutY="137.0" mnemonicParsing="false" onAction="#numberClick" prefHeight="43.0" prefWidth="49.0" text="1" />
+      <Button fx:id="Number2" layoutX="615.0" layoutY="137.0" mnemonicParsing="false" onAction="#numberClick" prefHeight="43.0" prefWidth="49.0" text="2" />
+      <Button fx:id="Number3" layoutX="683.0" layoutY="137.0" mnemonicParsing="false" onAction="#numberClick" prefHeight="43.0" prefWidth="49.0" text="3" />
+      <Button fx:id="Number0" layoutX="542.0" layoutY="200.0" mnemonicParsing="false" onAction="#numberClick" prefHeight="43.0" prefWidth="49.0" text="0" />
+      <Button fx:id="NumberDot" layoutX="615.0" layoutY="200.0" mnemonicParsing="false" onAction="#numberClick" prefHeight="43.0" prefWidth="49.0" text="." />
+      <Button fx:id="NumberDelete" layoutX="683.0" layoutY="200.0" mnemonicParsing="false" onAction="#numberClick" prefHeight="43.0" prefWidth="49.0" text="C" />
+      <TextField fx:id="textTotalPayment" layoutX="444.0" layoutY="315.0" />
+      <Label layoutX="20.0" layoutY="293.0" text="Subtotal : $">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="58.0" layoutY="331.0" text="Tax : $">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="44.0" layoutY="367.0" text="Total : $">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelSubTotal" layoutX="130.0" layoutY="296.0" text="label">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelTax" layoutX="130.0" layoutY="334.0" text="label">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelTotal" layoutX="128.0" layoutY="370.0" text="label">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="279.0" layoutY="311.0" prefHeight="30.0" prefWidth="162.0" text="Total Payment : $">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="338.0" layoutY="351.0" prefHeight="30.0" prefWidth="107.0" text="Change : $">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelChange" layoutX="451.0" layoutY="355.0" text="label">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="buttonReset" layoutX="648.0" layoutY="346.0" mnemonicParsing="false" onAction="#btnResetClick" prefHeight="25.0" prefWidth="99.0" text="Reset" />
+      <Button fx:id="buttonPay" layoutX="648.0" layoutY="309.0" mnemonicParsing="false" onAction="#btnPayClick" prefHeight="25.0" prefWidth="99.0" text="Pay" />
+      <Label fx:id="labelHutang" layoutX="346.0" layoutY="387.0" text="Not Enough Money!!!" textFill="RED">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
