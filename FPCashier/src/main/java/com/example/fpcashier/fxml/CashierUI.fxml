@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="472.0" prefWidth="759.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fpcashier.controller.CashierController">
+   <children>
+      <TableView fx:id="TableItem" layoutX="196.0" layoutY="89.0" prefHeight="249.0" prefWidth="316.0">
+        <columns>
+          <TableColumn fx:id="itemName" prefWidth="75.0" text="Item" />
+          <TableColumn fx:id="itemQty" prefWidth="56.0" text="Qty" />
+            <TableColumn fx:id="itemPrice" prefWidth="94.0" text="Unit Price" />
+            <TableColumn fx:id="tableTotalPrice" prefWidth="90.0" text="Total Price" />
+        </columns>
+      </TableView>
+      <Button fx:id="Number7" layoutX="534.0" layoutY="91.0" mnemonicParsing="false" onAction="#numberClick" prefHeight="43.0" prefWidth="49.0" text="7" />
+      <Button fx:id="Number8" layoutX="607.0" layoutY="91.0" mnemonicParsing="false" onAction="#numberClick" prefHeight="43.0" prefWidth="49.0" text="8" />
+      <Button fx:id="Number9" layoutX="675.0" layoutY="91.0" mnemonicParsing="false" onAction="#numberClick" prefHeight="43.0" prefWidth="49.0" text="9" />
+      <Button fx:id="Number4" layoutX="534.0" layoutY="148.0" mnemonicParsing="false" onAction="#numberClick" prefHeight="43.0" prefWidth="49.0" text="4" />
+      <Button fx:id="Number5" layoutX="607.0" layoutY="148.0" mnemonicParsing="false" onAction="#numberClick" prefHeight="43.0" prefWidth="49.0" text="5" />
+      <Button fx:id="Number6" layoutX="675.0" layoutY="148.0" mnemonicParsing="false" onAction="#numberClick" prefHeight="43.0" prefWidth="49.0" text="6" />
+      <Button fx:id="Number1" layoutX="534.0" layoutY="207.0" mnemonicParsing="false" onAction="#numberClick" prefHeight="43.0" prefWidth="49.0" text="1" />
+      <Button fx:id="Number2" layoutX="607.0" layoutY="207.0" mnemonicParsing="false" onAction="#numberClick" prefHeight="43.0" prefWidth="49.0" text="2" />
+      <Button fx:id="Number3" layoutX="675.0" layoutY="207.0" mnemonicParsing="false" onAction="#numberClick" prefHeight="43.0" prefWidth="49.0" text="3" />
+      <Button fx:id="Number0" layoutX="534.0" layoutY="270.0" mnemonicParsing="false" onAction="#numberClick" prefHeight="43.0" prefWidth="49.0" text="0" />
+      <Button fx:id="NumberDot" layoutX="607.0" layoutY="270.0" mnemonicParsing="false" onAction="#numberClick" prefHeight="43.0" prefWidth="49.0" text="." />
+      <Button fx:id="NumberDelete" layoutX="675.0" layoutY="270.0" mnemonicParsing="false" onAction="#numberClick" prefHeight="43.0" prefWidth="49.0" text="C" />
+      <TextField fx:id="textTotalPayment" layoutX="438.0" layoutY="363.0" />
+      <Label layoutX="14.0" layoutY="341.0" text="Subtotal : $">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="52.0" layoutY="379.0" text="Tax : $">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="38.0" layoutY="415.0" text="Total : $">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelSubTotal" layoutX="124.0" layoutY="344.0" text="label">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelTax" layoutX="124.0" layoutY="382.0" text="label">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelTotal" layoutX="122.0" layoutY="418.0" text="label">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="273.0" layoutY="359.0" prefHeight="30.0" prefWidth="162.0" text="Total Payment : $">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="332.0" layoutY="399.0" prefHeight="30.0" prefWidth="107.0" text="Change : $">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelChange" layoutX="445.0" layoutY="403.0" text="label">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="buttonReset" layoutX="642.0" layoutY="394.0" mnemonicParsing="false" onAction="#btnResetClick" prefHeight="25.0" prefWidth="99.0" text="Reset" />
+      <Button fx:id="buttonPay" layoutX="642.0" layoutY="357.0" mnemonicParsing="false" onAction="#btnPayClick" prefHeight="25.0" prefWidth="99.0" text="Pay" />
+      <Label fx:id="labelHutang" layoutX="340.0" layoutY="435.0" text="Not Enough Money!!!" textFill="RED">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <MenuBar fx:id="menuBar" layoutX="7.0" layoutY="2.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Cashier">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#switchCashier" text="Cashier" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Product">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#switchProductAdd" text="Add Product" />
+                  <MenuItem mnemonicParsing="false" onAction="#switchProductDelete" text="Delete Product" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ComboBox fx:id="cboProduct" layoutX="15.0" layoutY="124.0" onAction="#selectProduct" prefWidth="150.0" />
+      <Label layoutX="15.0" layoutY="94.0" text="Product : ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="221.0" text="Quantity : ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="spQty" layoutX="115.0" layoutY="224.0" prefHeight="21.0" prefWidth="70.0" />
+      <Button fx:id="buttonAdd" layoutX="15.0" layoutY="277.0" mnemonicParsing="false" onAction="#btnAddClick" prefHeight="25.0" prefWidth="149.0" text="Add Product" />
+      <RadioButton fx:id="rdoAll" layoutX="28.0" layoutY="53.0" mnemonicParsing="false" onAction="#changeView" text="All">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="ProductType" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rdoFood" layoutX="117.0" layoutY="53.0" mnemonicParsing="false" onAction="#changeView" text="Food" toggleGroup="$ProductType">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="rdoDrink" layoutX="273.0" layoutY="53.0" mnemonicParsing="false" onAction="#changeView" text="Drink" toggleGroup="$ProductType">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="rdoDessert" layoutX="421.0" layoutY="53.0" mnemonicParsing="false" onAction="#changeView" text="Dessert" toggleGroup="$ProductType">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="rdoOther" layoutX="583.0" layoutY="53.0" mnemonicParsing="false" onAction="#changeView" text="Other" toggleGroup="$ProductType">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </RadioButton>
+      <Label fx:id="labelPrice" layoutX="15.0" layoutY="170.0" text="Price : $">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
