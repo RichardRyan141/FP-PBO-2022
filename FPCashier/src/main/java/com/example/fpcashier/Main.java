@@ -6,12 +6,18 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.File;
+import java.net.URL;
+
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("CashierUI.fxml"));
+        File f = new File("src\\main\\java\\com\\example\\fpcashier\\fxml\\CashierUI.fxml");
+        URL url = new File(f.getAbsolutePath().toString()).toURI().toURL();
+        Parent root = FXMLLoader.load(url);
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
         stage.setTitle("Cashier");
-        stage.setScene(new Scene(root));
         stage.show();
     }
 
