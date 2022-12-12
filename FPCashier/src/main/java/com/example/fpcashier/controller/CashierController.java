@@ -443,7 +443,7 @@ public class CashierController implements Initializable {
         stage = (Stage) menuBar.getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
-        stage.setTitle("Add Product");
+        stage.setTitle("Delete Product");
         stage.show();
     }
 
