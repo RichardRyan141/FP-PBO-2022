@@ -26,6 +26,17 @@ Demo : https://youtu.be/tBpyNhuqPhY
 https://github.com/RichardRyan141/FP-PBO-2022/blob/3bad63f77362e809aace7122c2852ff7db82722f/FPCashier/src/main/java/com/example/fpcashier/controller/CashierController.java#L138
 https://github.com/RichardRyan141/FP-PBO-2022/blob/3bad63f77362e809aace7122c2852ff7db82722f/FPCashier/src/main/java/com/example/fpcashier/controller/CashierController.java#L144
 
+2. Constructor
+https://github.com/RichardRyan141/FP-PBO-2022/blob/1e1e9da0a06d9138ea73352d519ccb529186b729/FPCashier/src/main/java/com/example/fpcashier/product/Dessert.java#L5-L8
+
+3. Overloading
+https://github.com/RichardRyan141/FP-PBO-2022/blob/1e1e9da0a06d9138ea73352d519ccb529186b729/FPCashier/src/main/java/com/example/fpcashier/product/Dessert.java#L10-L18
+
+4. Overriding
+https://github.com/RichardRyan141/FP-PBO-2022/blob/1e1e9da0a06d9138ea73352d519ccb529186b729/FPCashier/src/main/java/com/example/fpcashier/product/Item.java#L39-L42
+https://github.com/RichardRyan141/FP-PBO-2022/blob/1e1e9da0a06d9138ea73352d519ccb529186b729/FPCashier/src/main/java/com/example/fpcashier/product/Dessert.java#L20-L24
+
+
 
 Referensi : 
 Communicating between controllers - https://www.youtube.com/watch?v=wxhGKR3PQpo
