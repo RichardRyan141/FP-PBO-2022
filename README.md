@@ -20,8 +20,13 @@ GUI : JavaFX
 
 Laporan : https://drive.google.com/file/d/1htZkbSGCf4DwZeTp51p8v9Xdvv7Sshth/view?usp=share_link
 
-Demo : https://drive.google.com/drive/folders/1Lxjpd9I57ZR_8CruTUkXT82flzJLI7pn?usp=share_link
+Demo : https://youtu.be/tBpyNhuqPhY
 
-Source Code : 
+1. Casting / Conversion
+https://github.com/RichardRyan141/FP-PBO-2022/blob/3bad63f77362e809aace7122c2852ff7db82722f/FPCashier/src/main/java/com/example/fpcashier/controller/CashierController.java#L138
+https://github.com/RichardRyan141/FP-PBO-2022/blob/3bad63f77362e809aace7122c2852ff7db82722f/FPCashier/src/main/java/com/example/fpcashier/controller/CashierController.java#L144
+
+
+Referensi : 
 Communicating between controllers - https://www.youtube.com/watch?v=wxhGKR3PQpo
 Inserting data to tableview - https://www.youtube.com/watch?v=O4BHfZQlSbs
