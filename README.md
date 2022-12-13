@@ -22,7 +22,7 @@ Laporan : https://drive.google.com/file/d/1htZkbSGCf4DwZeTp51p8v9Xdvv7Sshth/view
 
 Demo : https://youtu.be/tBpyNhuqPhY
 
-Referensi : 
+Referensi :  
 Communicating between controllers - https://www.youtube.com/watch?v=wxhGKR3PQpo  
 Inserting data to tableview - https://www.youtube.com/watch?v=O4BHfZQlSbs
 
