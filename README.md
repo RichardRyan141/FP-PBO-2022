@@ -25,7 +25,7 @@ Demo : https://youtu.be/tBpyNhuqPhY
 Referensi :  
 Communicating between controllers - https://www.youtube.com/watch?v=wxhGKR3PQpo  
 Inserting data to tableview - https://www.youtube.com/watch?v=O4BHfZQlSbs
-
+---
 1. Casting / Conversion
 https://github.com/RichardRyan141/FP-PBO-2022/blob/3bad63f77362e809aace7122c2852ff7db82722f/FPCashier/src/main/java/com/example/fpcashier/controller/CashierController.java#L138
 https://github.com/RichardRyan141/FP-PBO-2022/blob/3bad63f77362e809aace7122c2852ff7db82722f/FPCashier/src/main/java/com/example/fpcashier/controller/CashierController.java#L144
